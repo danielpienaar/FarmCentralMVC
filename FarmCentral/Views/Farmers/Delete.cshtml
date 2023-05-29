@@ -1,0 +1,45 @@
+﻿@model FarmCentral.Models.ModelsDB.Farmer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="display-6 txt-secondary mb-4">@ViewBag.DeleteMessage</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FarmerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FarmerId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FarmerEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FarmerEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FarmerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FarmerName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FarmerId" />
+        <input type="submit" value="Delete" class="btn button-secondary button-grow mb-4 crud-button" />
+    </form>
+    <div>
+        @if ((ViewBag.DeleteMessage).Equals("Are you sure you want to delete your account?"))
+        {
+            <input class="btn button-primary button-grow crud-button" type="button" value="Back" onclick="location.href='@Url.Action("Index", "Farmers")'" />
+        }
+        else
+        {
+            <input class="btn button-primary button-grow crud-button" type="button" value="Back" onclick="location.href='@Url.Action("Index", "Employees")'" />
+        }
+    </div>
+</div>

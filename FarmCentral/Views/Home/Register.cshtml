@@ -1,0 +1,37 @@
+﻿@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<main class="form-signin w-100 m-auto">
+    <form method="post" asp-antiforgery="true" onsubmit="ShowLoading('registerButton')">
+        <img class="mb-4" src="~/img/tree.png" alt="" width="150" height="150">
+        <h1 class="h3 mb-3 fw-normal txt-primary">Employee Registration</h1>
+        <br />
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="Email" asp-for="EmployeeEmail" required>
+            <label for="floatingEmail">Email</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingName" placeholder="Name" asp-for="EmployeeName" required>
+            <label for="floatingName">Name</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" asp-for="EmployeePassword" minlength="6" required>
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPasswordConfirmation" placeholder="Confirm Password" asp-for="EmployeePasswordConfirmation" minlength="6" required>
+            <label for="floatingPasswordConfirmation">Confirm Password</label>
+        </div>
+        <br />
+        <p class="text-danger">
+            @ViewBag.RegisterError
+        </p>
+        <br />
+        <!-- mb-4 for below margin -->
+        <button class="w-100 btn btn-lg button-primary button-grow mb-4" type="submit" id="registerButton" asp-controller="Home" asp-action="InsertEmployee">Register</button>
+        <button class="w-100 btn btn-lg button-secondary button-grow" type="submit" formnovalidate asp-controller="Home" asp-action="Index">Back</button>
+    </form>
+</main>

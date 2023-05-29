@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FarmCentral.Models.ModelsDB.Farmer>
+
+@{
+    ViewData["Title"] = ViewBag.EmployeeName;
+}
+
+<h1 class="mb-5 mt-5 display-6 txt-primary text-center">Hi @ViewBag.EmployeeName</h1>
+
+<h2 class="mb-3 txt-primary">Farmer List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FarmerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FarmerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FarmerName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input class="btn button-primary button-grow" type="button" value="Add Farmer" onclick="location.href='@Url.Action("Create", "Farmers")'" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FarmerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FarmerEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FarmerName)
+                </td>
+                <td>
+                    <!--
+                        using new {} to specify id field
+                        https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method
+                        accessed 26 May 2023
+                        -->
+                    <input class="btn button-primary button-grow option-button" type="button" value="Select" onclick="location.href='@Url.Action("Select", "Farmers", new { id = item.FarmerId })'" /> |
+                    <input class="btn button-primary button-grow option-button" type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Farmers", new { id = item.FarmerId })'" /> |
+                    <input class="btn button-secondary button-grow option-button" type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "Farmers", new { id = item.FarmerId })'" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

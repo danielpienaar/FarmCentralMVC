@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FarmCentral.Models.ModelsDB.Product>
+
+@{
+    ViewData["Title"] = ViewBag.FarmerName;
+}
+
+<h1 class="mb-5 mt-5 display-6 txt-primary text-center">Hi @ViewBag.FarmerName</h1>
+
+<h2 class="mb-3 txt-primary">Your Product List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductListDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input class="btn button-primary button-grow" type="button" value="Add Product" onclick="location.href='@Url.Action("Create", "Products")'" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                </td>
+                <td>
+                    R @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductListDate)
+                </td>
+                <td>
+                    <!--
+                    using new {} to specify id field
+                    https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method
+                    accessed 26 May 2023
+                    -->
+                    <input class="btn button-primary button-grow option-button" type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Products", new { id = item.ProductId })'" /> |
+                    <input class="btn button-secondary button-grow option-button" type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "Products", new { id = item.ProductId })'" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

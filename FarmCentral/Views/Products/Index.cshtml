@@ -1,0 +1,118 @@
+﻿@model IEnumerable<FarmCentral.Models.ModelsDB.Product>
+
+@{
+    ViewData["Title"] = ViewBag.FarmerName;
+}
+
+<div class="row">
+    <input class="col-md-1 btn button-outline-secondary button-grow option-button" type="button" value="Back" onclick="location.href='@Url.Action("Index", "Employees")'" />
+    <div class="col-md-11"></div>
+</div>
+
+<h1 class="mb-5 display-6 txt-primary text-center">@ViewBag.FarmerName's Products</h1>
+
+<!-- Collapsable component containing filtering options -->
+<div class="accordion mb-5" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Filtering Options
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <form asp-action="index" asp-controller="Products">
+                    <div class="row mb-2">
+                        <div class="col-sm-8">
+                            <label class="txt-primary" for="start">Type:</label>
+                            <select id="category" name="category" class="form-control">
+                                @foreach (var item in ViewBag.ProductTypes)
+                                {
+                                    <option value="@item">@item</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <input class="btn button-secondary button-grow option-button" type="submit" value="Sort by type" />
+                    </div>
+                </form>
+
+                <form asp-action="index" asp-controller="Products">
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="txt-primary" for="start">From:</label>
+                            <input class="form-control" type="date" id="startDate" name="startDate" value="" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="txt-primary" for="end">to:</label>
+                            <input class="form-control" type="date" id="endDate" name="endDate" value="" />
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <input class="btn button-secondary button-grow option-button" type="submit" value="Sort by list date" />
+                    </div>
+                </form>
+
+                <input class="btn button-outline-secondary button-grow option-button mb-3 mt-1" type="button" value="Clear Filters" onclick="location.href='@Url.Action("Index", "Products")'" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="mb-3 txt-primary">Product List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductListDate)
+            </th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                </td>
+                <td>
+                    R @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductListDate)
+                </td>
+                @*<td>
+            <!--
+            using new {} to specify id field
+            https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method
+            accessed 26 May 2023
+            -->
+            <input class="btn button-primary button-grow option-button" type="button" value="Select" onclick="location.href='@Url.Action("Select", "Products", new { id = item.ProductId })'" /> |
+            <input class="btn button-primary button-grow option-button" type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Products", new { id = item.ProductId })'" /> |
+            <input class="btn button-secondary button-grow option-button" type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "Products", new { id = item.ProductId })'" />
+            </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+﻿@model FarmCentral.Models.ModelsDB.Employee
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="display-6 txt-secondary mb-4">Are you sure you want to delete your account?</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EmployeeId" />
+        <input type="submit" value="Delete" class="btn button-secondary button-grow mb-4 crud-button" />
+    </form>
+    <div>
+        <input class="btn button-primary button-grow crud-button" type="button" value="Back" onclick="location.href='@Url.Action("Index", "Employees")'" />
+    </div>
+</div>

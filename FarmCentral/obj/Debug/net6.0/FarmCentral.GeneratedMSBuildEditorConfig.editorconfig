@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FarmCentral
+build_property.RootNamespace = FarmCentral
+build_property.ProjectDir = C:\Users\User-PC\OneDrive\Documents\Varsity_College\Year_3\Semester_1\PROG7311\poe\FarmCentral\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\User-PC\OneDrive\Documents\Varsity_College\Year_3\Semester_1\PROG7311\poe\FarmCentral
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Employees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Employees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Employees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Farmers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Farmers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Farmers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Farmers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ii9ovdfmwc
+
+[C:/Users/User-PC/OneDrive/Documents/Varsity_College/Year_3/Semester_1/PROG7311/poe/FarmCentral/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-uaryb9fj0g

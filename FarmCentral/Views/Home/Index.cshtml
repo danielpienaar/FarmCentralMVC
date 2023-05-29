@@ -1,0 +1,35 @@
+﻿@model SigninViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<main class="form-signin w-100 m-auto">
+    <form method="post" asp-antiforgery="true" onsubmit="ShowLoading('signinButton')">
+        <img class="mb-4" src="~/img/tree.png" alt="" width="150" height="150">
+        <h1 class="h3 mb-3 fw-normal txt-primary">Farm Central</h1>
+        <br />
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="Email" asp-for="Email" required>
+            <label for="floatingEmail">Email</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" asp-for="Password" required>
+            <label for="floatingPassword">Password</label>
+        </div>
+        <br />
+        <p class="text-danger">
+            @ViewBag.LoginError
+        </p>
+        <br />
+        <!--
+            bootstrap styles used throughout program
+            https://getbootstrap.com/docs/5.3/getting-started/introduction/
+            Accessed 29 May 2023
+        -->
+        <!-- mb-4 for below margin -->
+        <button class="w-100 btn btn-lg button-primary button-grow mb-4" type="submit" id="signinButton" asp-controller="Home" asp-action="Login">Sign in</button>
+        <button class="w-100 btn btn-lg button-secondary button-grow" type="submit" id="registerButton" formnovalidate asp-controller="Home" asp-action="Register">Employee Registration</button>
+    </form>
+    <input class="mt-4 btn button-secondary button-grow option-button" type="button" value="Populate Database" onclick="location.href='@Url.Action("PopulateDB", "Home")'" />
+</main>
